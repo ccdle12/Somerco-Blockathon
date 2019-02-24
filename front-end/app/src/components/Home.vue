@@ -1,20 +1,25 @@
 <template>
-
   <div>
-    <!-- <button v&#45;on:click="checkoutPage"> Checkout </button> -->
-  <b-container class="bv-example-row">
-    <b-row>
-      <b-col>
-        <img v-on:click="checkoutPage" src=https://i.imgur.com/OC1iqqT.jpg/>
-        <button v-on:click="checkoutPage"> Checkout </button>
-      </b-col>
-      <b-col>2 of 3</b-col>
-      <b-col>3 of 3</b-col>
-    </b-row>
-  </b-container>
+    <b-container class="bv-example-row">
+      <b-row>
+        <b-col>
+          <b-card
+            title="Lager"
+            img-src="/beer.png"
+            img-top
+            tag="article"
+            style="max-width: 20rem;"
+            class="mb-2"
+            @click="checkoutPage"
+          >
+            <p>1 pint</p>
+          </b-card>
+        </b-col>
+        <b-col>2 of 3</b-col>
+        <b-col>3 of 3</b-col>
+      </b-row>
+    </b-container>
   </div>
-  
-
 </template>
 
 <script>
@@ -33,7 +38,7 @@ export default {
   },
 
   watch: {
-  }, 
+  },
 
   methods: {
     checkoutPage: function() {
